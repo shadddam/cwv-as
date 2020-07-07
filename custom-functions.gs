@@ -3,16 +3,18 @@
  *
  * @param {string} url The URL to test.
  * @param {string} metric The metric to return : "CLS", "FID" or "LCP".
+ * @param {string} device The type of device to use : "PHONE", "DESKTOP" or "TABLET".
  * @return The CLS, FID or LCP of the tested URL.
  * @customfunction
  */
-function chromeUxReport(url, metric) {
+function chromeUxReport(url, metric, device = "PHONE") {
 
   // Your API key
   var key = 'xxxXXXxxx';
   
   var data = {
-    'origin' : url
+    'origin' : url,
+    'formFactor' : device
   };
   
   var options = {
