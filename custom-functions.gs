@@ -13,7 +13,7 @@ function chromeUxReport(url, metric, device = "PHONE") {
   var key = 'xxxXXXxxx';
   
   var data = {
-    'origin' : url,
+    'url' : url,
     'formFactor' : device
   };
   
